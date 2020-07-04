@@ -38,9 +38,9 @@
 %   pars  = [M, K, t, m, alpha, beta gama];
 %   needaH = 1; sig2 = sig;
 % 
-%   [f1, a1y, H1y, fres] = sub_EGC(sig, pars, needaH);
+%   [f1, a1y, H1y, fres] = sub_XGC(sig, pars, needaH);
 
-function [f1, a1, H1, fres] = sub_EGC(sig, pars, needaH)
+function [f1, a1, H1, fres] = sub_XGC(sig, pars, needaH)
 % prepare parameters
 sqrt3 = sqrt(3); pi_6  = pi/6;
 M = pars(1); K = pars(2);

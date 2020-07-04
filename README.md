@@ -41,6 +41,6 @@ The algorithm is as below.
 
 # Sample codes
 
-[sub_EGC.m]: sub_EGC.m
+[sub_XGC.m]: sub_XGC.m
 
-The programming of yield value, gradient, and Hessian is provided in '[sub_EGC.m]' 
+The programming of yield value, gradient, and Hessian is provided in '[sub_XGC.m]' 
