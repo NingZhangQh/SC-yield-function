@@ -1,16 +1,17 @@
 # Introduction
 
-The **smoothed classic yield function** (SC) is convex and C2 continuous criterion. It can describe basic shear strength, tensile strength cut-off, compressive strength cap, and the impact of intermediate principal stress.
+The **extended generalized classic yield function** (EGC) is convex and C2 continuous criterion. It can describe basic shear strength, tensile strength cut-off, compressive strength cap, and the impact of intermediate principal stress.
 
 <center> 
-    <img src="Image/FigOverall.jpg" width="300"> <br> 
+    <img src="Image/FigOverall.png" width="300"> <br> 
     <div style="display: inline-block;">
-    Fig.1 the SC yield surface in principal stress space</div> 
+    Fig.1 the EGC yield surface in principal stress space</div> 
 </center>
+
 
 # Parameters
 
-There are five parameters in SC.
+There are five parameters in EGC.
 
 <img src="svgs/9c8f92472352eba54f4bbf577321e74a.svg?invert_in_darkmode" align=middle width=52.7076pt height=24.65759999999998pt/> are basic shear strength parameters. Their physical meanings are the cohesion and friction angle at the Lode angle <img src="svgs/fd1203f97cc7ecee568cec073736dcef.svg?invert_in_darkmode" align=middle width=38.31036pt height=22.831379999999992pt/>.
 
@@ -35,11 +36,11 @@ triaxial compression and triaxial extension tests.
 The algorithm is as below.
 
 <center>
-    <img src="Image/TableCalibration.jpg" width ="400">
+    <img src="Image/TableCalibration.png" width ="400">
 </center>
 
 # Sample codes
 
-[sub_SC.m]: sub_SC.m
+[sub_XGC.m]: sub_XGC.m
 
-The programming of yield value, gradient, and Hessian is provided in '[sub_SC.m]' 
+The programming of yield value, gradient, and Hessian is provided in '[sub_XGC.m]' 

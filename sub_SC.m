@@ -1,4 +1,4 @@
-% 20200702 Extended generalized classic yield function (2D)
+% 20200702 Smoothed Classic yield function (2D)
 % Author: Ning Zhang
 %   This function provides a sample programming for the new yield function
 %   In this code, the yield value, gradient, and Hessian for a given stress
@@ -38,9 +38,9 @@
 %   pars  = [M, K, t, m, alpha, beta gama];
 %   needaH = 1; sig2 = sig;
 % 
-%   [f1, a1y, H1y, fres] = sub_XGC(sig, pars, needaH);
+%   [f1, a1y, H1y, fres] = sub_SC(sig, pars, needaH);
 
-function [f1, a1, H1, fres] = sub_XGC(sig, pars, needaH)
+function [f1, a1, H1, fres] = sub_SC(sig, pars, needaH)
 % prepare parameters
 sqrt3 = sqrt(3); pi_6  = pi/6;
 M = pars(1); K = pars(2);
