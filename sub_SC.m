@@ -1,8 +1,10 @@
-% 20200702 Smoothed Classic yield function (2D)
+% 2021 Smoothed Classic yield function (2D)
 % Author: Ning Zhang
 %   This function provides a sample programming for the new yield function
 %   In this code, the yield value, gradient, and Hessian for a given stress
 % are sovled
+%   fixed issue: 
+%        1 when returning to f2 and f3, the Hessian should be zero. 
 % 
 % [Output]
 %   f1: the yield value
@@ -163,8 +165,8 @@ for ii = 1: 4
 end
 
 %% get gradient a and Hessian H
-a2 = [1/3;  1/3; 0;  1/3];
-a3 = [-1/3;-1/3; 0; -1/3];
+a2 = [1/3;  1/3; 0;  1/3]; Ho = zeros(4,4);
+a3 = [-1/3;-1/3; 0; -1/3]; 
 
 % prepare data
 num = fres(2); a12 = fres(3); a13 = fres(4); d12 = fres(5); d13 = fres(6);
@@ -172,9 +174,9 @@ num = fres(2); a12 = fres(3); a13 = fres(4); d12 = fres(5); d13 = fres(6);
 % combined with f2
 if num == 1
 elseif num == 2
-    a1 = a2;
+    a1 = a2; H1 = Ho;
 elseif num == 3
-    a1 = a3;
+    a1 = a3; H1 = Ho;
 elseif num == 12 || num == 123
     da = a1 - a2; pi_a = pi/a12;
     gx = 0.5 *sin(0.5*pi_a*d12);
